@@ -9,7 +9,7 @@ const Search = ({ setData }) => {
         const getData = async searchTerm => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://hn.algolia.com/api/v1/search?query=${searchTerm.length === 0 ? 'test' : searchTerm}`);
+                const response = await axios.get(`https://hn.algolia.com/api/v1/search?query=${searchTerm.length === 0 ? 'test' : searchTerm}`);
                 if (response && response.data && response.status === 200) {
                     setLoading(false);
                     setData(response.data.hits);

@@ -12,7 +12,7 @@ const Details = () => {
         const getDetails = async (id) => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://hn.algolia.com/api/v1/items/${id}`);
+                const response = await axios.get(`https://hn.algolia.com/api/v1/items/${id}`);
                 if (response && response.data && response.status === 200) {
                     setDetails(response.data);
                     setLoading(false);
